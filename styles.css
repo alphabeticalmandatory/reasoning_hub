@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 10px;
+    width: 0%;
+    background: #007BFF;
+    transition: width 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.correct {
+    color: green;
+    animation: correctAnim 0.5s ease-in-out;
+}
+
+.wrong {
+    color: red;
+    animation: wrongAnim 0.5s ease-in-out;
+}
+
+@keyframes correctAnim {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes wrongAnim {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(10deg); }
+}
