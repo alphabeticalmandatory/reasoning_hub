@@ -1,10 +1,19 @@
+// Function to get the inverse letter
+function inverseLetter(letter) {
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const index = alphabet.indexOf(letter);
+    if (index === -1) return "";  // If not found, return empty
+    return alphabet[25 - index];  // Mirror position
+}
+
+// Quiz Questions
 const questions = [
-    { question: "What comes next? A, C, E, G, ?", answer: "I" },
-    { question: "Find the place value of 'M'.", answer: "13" },
-    { question: "Reverse 5291.", answer: "1925" },
-    { question: "What comes next? B, D, F, H, ?", answer: "J" },
-    { question: "Find the place value of 'Z'.", answer: "26" },
-    { question: "Reverse 8734.", answer: "4378" }
+    { question: "Inverse of 'M'", answer: inverseLetter("M") }, // N
+    { question: "Inverse of 'A'", answer: inverseLetter("A") }, // Z
+    { question: "Inverse of 'B'", answer: inverseLetter("B") }, // Y
+    { question: "Inverse of 'X'", answer: inverseLetter("X") }, // C
+    { question: "Inverse of 'D'", answer: inverseLetter("D") }, // W
+    { question: "Reverse 5291", answer: "1925" }, // Keeping a number question too
 ];
 
 let score = 0;
